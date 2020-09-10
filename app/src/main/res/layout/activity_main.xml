@@ -10,75 +10,59 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <ImageView
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/pixel_google" />
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/pixel_google" />
+
+            <TextView
+                style="@style/TextContent.Small.White"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="-60dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="#4D000000"
+                android:drawableStart="@drawable/ic_collections_white_18dp"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/dummy_photos"
+                android:textColor="@android:color/white" />
+        </FrameLayout>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="-60dp"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:background="#4D000000"
-            android:drawableStart="@drawable/ic_collections_white_18dp"
-            android:drawableLeft="@drawable/ic_collections_white_18dp"
-            android:drawablePadding="4dp"
-            android:gravity="center_vertical"
-            android:paddingLeft="8dp"
-            android:paddingTop="8dp"
-            android:paddingRight="8dp"
-            android:paddingBottom="8dp"
-            android:text="@string/dummy_photos"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textColor="@android:color/white" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            style="@style/TextContent.Black"
             android:layout_marginBottom="8dp"
             android:text="@string/dummy_value"
-            android:textColor="#CC5816E7"
             android:textSize="32sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:text="@string/stock"
-            android:textSize="12sp" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            style="@style/TextContent.Subtitle"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="@string/stock" />
+
+        <TextView
+            style="@style/TextContent"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:lineSpacingMultiplier="1"
             android:text="@string/content_text"
             android:textColor="@android:color/black" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            style="@style/TextContent.Subtitle"
             android:layout_marginBottom="8dp"
-            android:fontFamily="Casual"
-            android:text="@string/specification"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:text="@string/specification" />
 
         <TableLayout
             android:layout_width="match_parent"
@@ -98,20 +82,12 @@
                 android:layout_marginBottom="8dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:text="@string/display"
-                    android:textSize="14sp" />
+                    style="@style/TextSpec.Field"
+                    android:text="@string/display" />
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/content_specs_display"
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp" />
+                    style="@style/TextSpec.Value"
+                    android:text="@string/content_specs_display" />
 
             </TableRow>
 
@@ -121,20 +97,12 @@
                 android:layout_marginBottom="8dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:text="@string/size"
-                    android:textSize="14sp" />
+                    style="@style/TextSpec.Field"
+                    android:text="@string/size" />
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/content_specs_size"
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp" />
+                    style="@style/TextSpec.Value"
+                    android:text="@string/content_specs_size" />
 
             </TableRow>
 
@@ -144,33 +112,21 @@
                 android:layout_marginBottom="8dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:text="@string/battery"
-                    android:textSize="14sp" />
+                    style="@style/TextSpec.Field"
+                    android:text="@string/battery" />
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/content_specs_battery"
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp" />
+                    style="@style/TextSpec.Value"
+                    android:text="@string/content_specs_battery" />
 
             </TableRow>
 
         </TableLayout>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            style="@style/TextContent.Subtitle"
             android:layout_marginBottom="8dp"
-            android:text="@string/seller"
-            android:textSize="12sp" />
+            android:text="@string/seller" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -189,9 +145,7 @@
                 android:src="@drawable/photo_2" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
+                style="@style/TextContent"
                 android:layout_toEndOf="@id/Profile_image"
                 android:layout_toRightOf="@id/Profile_image"
                 android:text="@string/my_name"
@@ -200,16 +154,11 @@
         </RelativeLayout>
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/ButtonGeneral"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:background="#CCA799C5"
-            android:fontFamily="Casual"
-            android:text="@string/buy"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+            android:text="@string/buy" />
     </LinearLayout>
 
 </ScrollView>
